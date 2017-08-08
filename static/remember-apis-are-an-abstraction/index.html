@@ -1,0 +1,238 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Remember.. APIs are an abstraction</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=1942c052e4">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="amp/index.html">
+    
+    <meta property="og:site_name" content="API Evangelism, Technology, and Exploration">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Remember.. APIs are an abstraction">
+    <meta property="og:description" content="Have you ever noticed how the best APIs on the market seem to provide a simple elegant and clean interface to the data? Developers and API designers take note - this does not happen by accident. This simple design principle was something that I didn't really pay much attention to">
+    <meta property="og:url" content="http://localhost:2368/remember-apis-are-an-abstraction/">
+    <meta property="article:published_time" content="2017-08-08T11:48:59.000Z">
+    <meta property="article:modified_time" content="2017-08-08T11:48:59.000Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Remember.. APIs are an abstraction">
+    <meta name="twitter:description" content="Have you ever noticed how the best APIs on the market seem to provide a simple elegant and clean interface to the data? Developers and API designers take note - this does not happen by accident. This simple design principle was something that I didn't really pay much attention to">
+    <meta name="twitter:url" content="http://localhost:2368/remember-apis-are-an-abstraction/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Jordan Walsh">
+    <meta name="twitter:site" content="@jordwalsh">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "API Evangelism, Technology, and Exploration",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Jordan Walsh",
+        "url": "http://localhost:2368/author/jordan/",
+        "sameAs": []
+    },
+    "headline": "Remember.. APIs are an abstraction",
+    "url": "http://localhost:2368/remember-apis-are-an-abstraction/",
+    "datePublished": "2017-08-08T11:48:59.000Z",
+    "dateModified": "2017-08-08T11:48:59.000Z",
+    "description": "Have you ever noticed how the best APIs on the market seem to provide a simple elegant and clean interface to the data? Developers and API designers take note - this does not happen by accident. This simple design principle was something that I didn&#x27;t really pay much attention to",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <script type="text/javascript" src="../public/ghost-sdk.js?v=1942c052e4"></script>
+<script type="text/javascript">
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "305870830c5f"
+});
+</script>
+    <meta name="generator" content="Ghost 1.5">
+    <link rel="alternate" type="application/rss+xml" title="API Evangelism, Technology, and Exploration" href="../rss/index.html">
+</head>
+<body class="post-template nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-home"><a href="../">Home</a></li>
+    </ul>
+        <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <div class="main-header-background-square"></div>
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Remember.. APIs are an abstraction</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2017-08-08">08 August 2017</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div class="kg-card-markdown"><p>Have you ever noticed how the best APIs on the market seem to provide a simple elegant and clean interface to the data? Developers and API designers take note - this does not happen by accident.</p>
+<p>This simple design principle was something that I didn't really pay much attention to when i was first building out our API, however I've become much more aware of it recently, and it is now almost impossible to change;</p>
+<p><strong>APIs are an abstraction of the data; not the representation of it</strong></p>
+<p>The easiest approach to developing an API is to simply take either the Database representation of a resource (e.g. the row), or it's associated application file (e.g. Java class) and run some sort of JSON converter over it.</p>
+<p>This will give you a lovely output in JSON of the data. Expose this via a URL and job done, you've got an API.. right? ...<strong>Wrong.</strong></p>
+<p>This pattern has two very large flaws;</p>
+<ol>
+	<li>Exposure of unnecessary fields</li>
+	<li>Tightly coupling your API to your Back End</li>
+</ol>
+<h2 id="exposureofunnecessaryfields">Exposure of Unnecessary Fields</h2>
+<p>By simply exposing your internal resource representation as an API, you are potentially asking the API user fields they both don't need, and don't care about.</p>
+<p>Take the following example, suppose this is a row in a database table:</p>
+<table border="1" width="100%">
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>email</th>
+<th>billingreference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12345</td>
+<td>Johnny Smith</td>
+<td>johnny.smith@myapi.com</td>
+<td>c_28f898joc90</td>
+</tr>
+</tbody>
+</table>
+Now this seems like a completely appropriate database table, so let's expose this as an API:
+<pre><code>GET http://myapi.com/customers/12345
+Accept: application/json
+{
+   "id" : "12345",
+   "name" : "Johnny Smith",
+   "email" : "johnny.smith@myapi.com",
+   "billingreference" : "c_28f898joc90"
+}
+</code></pre>
+<p>Looks good. Easy to consume, and matches the database perfectly. The only issue now is that you've exposed your billingreference data likely used for an internal system via your publicly accessible API.</p>
+<p>This means that the user now has to inspect and make note of this data, (which they shouldn't really be seeing in the first place) and worse they potentially may store it 'just incase' they may need it in the future.</p>
+<p>The second issue with this approach is that you've also tightly coupled your representation in the Database with your API representation.</p>
+<h2 id="tightlycoupledapiwithyourbackend">Tightly Coupled API with your Back End</h2>
+<p>Tightly coupling is a major flaw in API development, and I have seen it happen numerous times.  By tightly coupling this information, you remove the ability to change your Back End system without having to also change your API.</p>
+<p>APIs should be completely abstracted from the back end system, allowing users to consume the representation that you want them to receive, while being completely independent from where the data is stored.</p>
+<p>If one day you wanted to remove the billingreference column above, and put it in another table, you now have to modify your API to continue providing this field, or version the API to deprecate it.</p>
+<p>If it was never provided in the first place, you've saved yourself a rather large headache.</p>
+<p><strong>Provide only the fields that are useful, and nothing else</strong></p>
+<p>When designing your API resources, make sure you follow this mantra.  It will ensure that you have simple, clean and useful API representations that your users will love, and it will allow your developers to change their back end systems independent of the API representation.</p>
+<p>This method also allows you to use tools like <a href="http://apiary.io">apiary.io</a> and apiblueprint to design your API well before any actual coding begins, which is a major plus when trying to understand what your users actually want.</p>
+<p><em>Originally posted on <a href="http://jordwalsh.com">jordwalsh.com</a> on 28 March 2015.</em></p>
+</div>
+        </section>
+
+        <footer class="post-footer">
+
+
+
+            <section class="author">
+                <h4><a href="../author/jordan/">Jordan Walsh</a></h4>
+
+                    <p>Read <a href="../author/jordan/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Remember..%20APIs%20are%20an%20abstraction&amp;url=http://localhost:2368/remember-apis-are-an-abstraction/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/remember-apis-are-an-abstraction/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://localhost:2368/remember-apis-are-an-abstraction/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+
+        </footer>
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story no-cover" href="../saving-and-versioning-swagger-definitions/">
+        <section class="post">
+            <h2>Saving and Versioning Swagger definitions</h2>
+            <p>TL;DR - Check out swagger-gist.io to start saving Swagger definitions as Gists. During my time as an…</p>
+        </section>
+    </a>
+    <a class="read-next-story prev no-cover" href="../api-management-platforms-do-i-need-one/">
+        <section class="post">
+            <h2>API Management Platforms - do I need one?</h2>
+            <p>One thing every enterprise API creator needs to think about at some point prior to the API going to…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">API Evangelism, Technology, and Exploration</a> © 2017</section>
+            <section class="poweredby">Powered by <a href="http://boo-demo.tenoku.com/">Ghost + Boo</a></section>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=1942c052e4"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=1942c052e4"></script>
+    <script src="https://cdn.jsdelivr.net/mobile-detect.js/1.3.3/mobile-detect.min.js"></script>
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+
+</body>

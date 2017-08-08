@@ -1,0 +1,208 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>How do users want to see you securing your API?</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=1942c052e4">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="amp/index.html">
+    
+    <meta property="og:site_name" content="API Evangelism, Technology, and Exploration">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How do users want to see you securing your API?">
+    <meta property="og:description" content="Where I work, where we supply a software platform that is providing a service to users. Like thousands of others of these services, people can log into our web interface using their username and password and can perform some actions within the tool (wordpress is a good example of such">
+    <meta property="og:url" content="http://localhost:2368/how-do-users-want-to-see-you-securing-your-api/">
+    <meta property="article:published_time" content="2017-08-08T11:41:32.000Z">
+    <meta property="article:modified_time" content="2017-08-08T11:41:32.000Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="How do users want to see you securing your API?">
+    <meta name="twitter:description" content="Where I work, where we supply a software platform that is providing a service to users. Like thousands of others of these services, people can log into our web interface using their username and password and can perform some actions within the tool (wordpress is a good example of such">
+    <meta name="twitter:url" content="http://localhost:2368/how-do-users-want-to-see-you-securing-your-api/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Jordan Walsh">
+    <meta name="twitter:site" content="@jordwalsh">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "API Evangelism, Technology, and Exploration",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Jordan Walsh",
+        "url": "http://localhost:2368/author/jordan/",
+        "sameAs": []
+    },
+    "headline": "How do users want to see you securing your API?",
+    "url": "http://localhost:2368/how-do-users-want-to-see-you-securing-your-api/",
+    "datePublished": "2017-08-08T11:41:32.000Z",
+    "dateModified": "2017-08-08T11:41:32.000Z",
+    "description": "Where I work, where we supply a software platform that is providing a service to users. Like thousands of others of these services, people can log into our web interface using their username and password and can perform some actions within the tool (wordpress is a good example of such",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <script type="text/javascript" src="../public/ghost-sdk.js?v=1942c052e4"></script>
+<script type="text/javascript">
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "305870830c5f"
+});
+</script>
+    <meta name="generator" content="Ghost 1.5">
+    <link rel="alternate" type="application/rss+xml" title="API Evangelism, Technology, and Exploration" href="../rss/index.html">
+</head>
+<body class="post-template nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-home"><a href="../">Home</a></li>
+    </ul>
+        <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <div class="main-header-background-square"></div>
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">How do users want to see you securing your API?</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2017-08-08">08 August 2017</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div class="kg-card-markdown"><p>Where I work, where we supply a software platform that is providing a service to users.</p>
+<p>Like thousands of others of these services, people can log into our web interface using their <strong>username</strong> and <strong>password</strong> and can perform some actions within the tool (wordpress is a good example of such a system).</p>
+<p>When this type of service is transitioned into an API, we generally are no longer dealing with <strong>username</strong> and <strong>passwords</strong>, we are now dealing with API keys, signatures, <a href="http://www.thebuzzmedia.com/designing-a-secure-rest-api-without-oauth-authentication/" title="HMAC">HMAC</a>, and a whole raft of other jargon to do essentially the same thing.</p>
+<p>When I was thinking about how I was going to set up Authorisation to our API, I thought about the types of API users who would be using the service.</p>
+<p>I could identify two kinds of people building applications that use my API:</p>
+<p><strong>1. The Service Provider</strong><br>
+This is the person that is building a new application, and wants to utilise the functionality provided by the API.  They are going to have their own users database, and they'll authenticate to the API using their own credentials.</p>
+<p><strong>2. The Service Extender</strong> This is the person that is building an application that extends the functionality of the existing service using the API.</p>
+<p>They may or may not have their own users database, but the likelihood is that they'll allow their users to authenticate to the API using their own credentials within the service (e.g. OAuth).</p>
+<hr>
+<p>As I follow the <a href="http://en.wikipedia.org/wiki/You_aren't_gonna_need_it">YAGNI</a> principle as much as possible, the only users that I had in the first instance fit into the first category.</p>
+<p>Based on this, there wasn't much point in supporting an OAuth style framework until we had some users that were jumping up and down for it.</p>
+<p><strong>Keep the authorisation simple and your users will thank you.</strong></p>
+<p>HTTP already has support built-in for authorising users, so I deemed the easiest way was to use the out of the box Authorization header. Take the existing username and password to access the service that users already know, turn it into Base64 and use Basic HTTP to access the API. So a username and password of _john.smith / Password123 _becomes:</p>
+<pre><span style="font-family:Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;"><span style="line-height:normal;">HTTPS 1.1 GET /messages
+Authorization: Basic am9obi5zbWl0aDpQYXNzd29yZDEyMw==</span></span></pre>
+<p>Every programming language comes with a <strong>Base64</strong> encoder built-in, so it's simple for the users to set up. There are no timestamps, signatures, HMAC or any of the other cumbersome approaches.</p>
+<p>However, there is one caveat; you must use <strong>HTTPS</strong>.</p>
+<p><strong>As long as you force HTTPS, this is method secure.</strong></p>
+<p>Without HTTPS however, this mechanism is clearly open to <a href="http://netsecurity.about.com/cs/hackertools/a/aa121403.htm">packet sniffing</a> and <a href="http://en.wikipedia.org/wiki/Man-in-the-middle_attack">man-in-the-middle</a> attacks.</p>
+<p>I have no doubt the day will come where we need to build this out to support services like OAuth or perhaps generation of signatures using timestamps and shared secrets, but in 3 years of running this service, we haven't had any complaints from users about this methodology.</p>
+<p>Perhaps when you are thinking of authorising your API, check with your users about this methodology before jumping straight to OAuth or similar.</p>
+<p><em>Originally published on <a href="http://jordwalsh.com">jordwalsh.com</a> - 14 September 2014</em></p>
+</div>
+        </section>
+
+        <footer class="post-footer">
+
+
+
+            <section class="author">
+                <h4><a href="../author/jordan/">Jordan Walsh</a></h4>
+
+                    <p>Read <a href="../author/jordan/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=How%20do%20users%20want%20to%20see%20you%20securing%20your%20API%3F&amp;url=http://localhost:2368/how-do-users-want-to-see-you-securing-your-api/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/how-do-users-want-to-see-you-securing-your-api/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://localhost:2368/how-do-users-want-to-see-you-securing-your-api/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+
+        </footer>
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story no-cover" href="../api-management-platforms-do-i-need-one/">
+        <section class="post">
+            <h2>API Management Platforms - do I need one?</h2>
+            <p>One thing every enterprise API creator needs to think about at some point prior to the API going to…</p>
+        </section>
+    </a>
+    <a class="read-next-story prev no-cover" href="../designing-the-api-identifying-the-resource-types/">
+        <section class="post">
+            <h2>Designing the API – Identifying the resource types</h2>
+            <p>Before I jump directly into my version of "Donny Do" and "Donny Don't" for APIs,…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">API Evangelism, Technology, and Exploration</a> © 2017</section>
+            <section class="poweredby">Powered by <a href="http://boo-demo.tenoku.com/">Ghost + Boo</a></section>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=1942c052e4"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=1942c052e4"></script>
+    <script src="https://cdn.jsdelivr.net/mobile-detect.js/1.3.3/mobile-detect.min.js"></script>
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+
+</body>
